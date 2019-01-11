@@ -1,0 +1,55 @@
+<html>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link rel="icon" type="image/png" href="pictures/favicon.ico" />
+	<head>
+		<title>FastTrip.com - Pilotes</title>
+	</head>
+	<body>
+		<h1>Liste des départs pour le pilote {nom} {prenom}</h1>
+		<table class="menu">
+			<tr>
+				<td class="menu_cell">
+					<a href="aircrafts.php">Appareils</a>
+				</td>
+				<td class="menu_cell">
+					<a href="airports.php">Aéroports</a>
+				</td>
+				<td class="menu_cell">
+					<a href="flies.php">Vols</a>
+				</td>
+				<td class="menu_cell">
+					<a href="departures.php">Départs</a>
+				</td>
+				<td class="menu_cell">
+					<a href="passengers.php">Passagers</a>
+				</td>
+				<td class="menu_cell">
+					<a href="employees.php">Personnels</a>
+				</td>
+				<td class="menu_cell">
+					<a href="home.php">Deconnexion</a>
+				</td>
+			</tr>
+		</table>
+		<table class="classic_tab">
+			<tr>
+				<th>Date de départ</th>
+				<th>Aéroport départ</th>
+				<th>Aéroport arrivée</th>
+				<th>Horaire de départ</th>
+				<th>Horaire d'arrivée</th>
+				<th>Numéro de vol</th>
+			</tr>
+			<!-- BEGIN pilote -->
+				<tr  style="background-color:{pilote.color}">
+					<td>{pilote.date_depart}</td>
+					<td>{pilote.aeroport_depart}</td>
+					<td>{pilote.aeroport_arrivee}</td>
+					<td>{pilote.horaire_depart}</td>
+					<td>{pilote.horaire_arrivee}</td>
+					<td>{pilote.num_vol}</td>
+				</tr>
+			<!-- END pilote -->
+		</table>
+	</body>
+<html>

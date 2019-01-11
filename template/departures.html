@@ -1,0 +1,74 @@
+<html>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link rel="icon" type="image/png" href="pictures/favicon.ico" />
+	<head>
+		<title>FastTrip.com - Départs</title>
+	</head>
+	<body>
+		<h1>Les départs de FastTrip.com</h1>
+		<table class="menu">
+			<tr>
+				<td class="menu_cell">
+					<a href="aircrafts.php">Appareils</a>
+				</td>
+				<td class="menu_cell">
+					<a href="airports.php">Aéroports</a>
+				</td>
+				<td class="menu_cell">
+					<a href="flies.php">Vols</a>
+				</td>
+				<td class="menu_cell">
+					<a href="departures.php">Départs</a>
+				</td>
+				<td class="menu_cell">
+					<a href="passengers.php">Passagers</a>
+				</td>
+				<td class="menu_cell">
+					<a href="employees.php">Personnels</a>
+				</td>
+				<td class="menu_cell">
+					<a href="home.php">Deconnexion</a>
+				</td>
+			</tr>
+		</table>
+		{message_delete}
+		{message_insert}
+		{message_modify}
+		<table class="classic_tab">
+			<tr>
+				<th>Date de départ</th>
+				<th>Numéro de vol</th>
+				<th>Pilote 1</th>
+				<th>Pilote 2</th>
+				<th>Equipage 1</th>
+				<th>Equipage 2</th>
+				<th>Places disponibles</th>
+				<th>Places occupées</th>
+				<th>Prix</th>
+				<th>Modifier</th>
+				<th>Supprimer</th>
+				<th>Passagers</th>
+			</tr>
+			<!-- BEGIN depart -->
+				<tr  style="background-color:{depart.color}">
+					<td>{depart.date_depart}</td>
+					<td>{depart.num_vol}</td>
+					<td>{depart.pilote1}</td>
+					<td>{depart.pilote2}</td>
+					<td>{depart.equipage1}</td>
+					<td>{depart.equipage2}</td>
+					<td>{depart.nbr_places_libres}</td>
+					<td>{depart.nbr_places_occupes}</td>
+					<td>{depart.prix}</td>
+					<td><a href ="modify_departure.php?num_vol={depart.num_vol}&date_depart={depart.date_depart}"><img width="30px" height="30px" src="Pictures/modify.png"></a></td>
+					<td><a href ="departures.php?action=delete&num_vol={depart.num_vol}&date_depart={depart.date_depart}"><img width="30px" height="30px" src="Pictures/Delete.png"></a></td>
+					<td><a href ="passenger_departures.php?num_vol={depart.num_vol}&date_depart={depart.date_depart}"><img width="30px" height="30px" src="Pictures/passenger.png"></a></td>
+				</tr>
+			<!-- END depart -->
+		</table>
+		<a href="add_departure.php" class="ajouter">
+				<img width="30px" height="30px" src="pictures/add.png">
+				Ajouter un départ
+		</a>
+	</body>
+<html>

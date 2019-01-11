@@ -1,0 +1,36 @@
+<html>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link rel="icon" type="image/png" href="pictures/favicon.ico" />
+	<head>
+		<title>FastTrip.com</title>
+	</head>
+	<body class="home">
+		<h1>Création d'un compte</h1>
+		{message}
+		<form action="create_account.php" method="POST">
+		<table>
+			<tr>
+				<td><label class="label_add">Nom d'utilisateur : </label></td>
+				<td><input name="user"></td>
+			</tr>
+			<tr>
+				<td><label class="label_add">Mot de passe : </label></td>
+				<td><input name="mdp"></td>
+			</tr>
+			<tr>
+				<td><label class="label_add">Nom : </label></td>
+				<td><input name="nom"></td>
+			</tr>
+			<tr>
+				<td><label class="label_add">Prénom : </label></td>
+				<td><input name="prenom"></td>
+			</tr>
+			<tr>
+				<td><label class="label_add">Adresse : </label></td>
+				<td><input name="adresse"></td>
+			</tr>
+		</table>
+			<input type="submit" class="submit_cadre_login" name="add_passager_request">
+		</form>
+	</body>
+</html>

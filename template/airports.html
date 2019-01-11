@@ -1,0 +1,53 @@
+<html>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link rel="icon" type="image/png" href="pictures/favicon.ico" />
+	<head>
+		<title>FastTrip.com - Aéroports</title>
+	</head>
+	<body>
+		<h1>Liste des aéroports deservis par FastTrip.com</h1>
+		<table class="menu">
+			<tr>
+				<td class="menu_cell">
+					<a href="aircrafts.php">Appareils</a>
+				</td>
+				<td class="menu_cell">
+					<a href="airports.php">Aéroports</a>
+				</td>
+				<td class="menu_cell">
+					<a href="flies.php">Vols</a>
+				</td>
+				<td class="menu_cell">
+					<a href="departures.php">Départs</a>
+				</td>
+				<td class="menu_cell">
+					<a href="passengers.php">Passagers</a>
+				</td>
+				<td class="menu_cell">
+					<a href="employees.php">Personnels</a>
+				</td>
+				<td class="menu_cell">
+					<a href="home.php">Deconnexion</a>
+				</td>
+			</tr>
+		</table>
+		<table class="classic_tab">
+			<tr>
+				<th>Code AITA</th>
+				<th>Nom de l'aéroport</th>
+				<th>Ville</th>
+				<th>Pays</th>
+				<th>Départs/Arrivées</th>
+			</tr>
+			<!-- BEGIN aeroport -->
+			<tr  style="background-color:{aeroport.color}">
+				<td>{aeroport.code}</td>
+				<td>{aeroport.nom}</td>
+				<td>{aeroport.ville}</td>
+				<td>{aeroport.pays}</td>
+				<td><a href ='airport_departures.php?code={aeroport.code}'><img width="30px" height="30px" src="Pictures/flight.png"></a></td>
+			</tr>
+			<!-- END aeroport -->
+		</table>
+	</body>
+<html>

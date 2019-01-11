@@ -1,0 +1,55 @@
+<html>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link rel="icon" type="image/png" href="pictures/favicon.ico" />
+	<head>
+		<title>FastTrip.com - Appareils</title>
+	</head>
+	<body>
+		<h1>Liste des départs pour l'appareil {num_immatriculation}</h1>
+		<table class="menu">
+			<tr>
+				<td class="menu_cell">
+					<a href="aircrafts.php">Appareils</a>
+				</td>
+				<td class="menu_cell">
+					<a href="airports.php">Aéroports</a>
+				</td>
+				<td class="menu_cell">
+					<a href="flies.php">Vols</a>
+				</td>
+				<td class="menu_cell">
+					<a href="departures.php">Départs</a>
+				</td>
+				<td class="menu_cell">
+					<a href="passengers.php">Passagers</a>
+				</td>
+				<td class="menu_cell">
+					<a href="employees.php">Personnels</a>
+				</td>
+				<td class="menu_cell">
+					<a href="home.php">Deconnexion</a>
+				</td>
+			</tr>
+		</table>
+		<table class="classic_tab">
+			<tr>
+				<th>Date de départ</th>
+				<th>Aéroport départ</th>
+				<th>Aéroport arrivée</th>
+				<th>Horaire de départ</th>
+				<th>Horaire d'arrivée</th>
+				<th>Numéro de vol</th>
+			</tr>
+			<!-- BEGIN appareil -->
+				<tr  style="background-color:{appareil.color}">
+					<td>{appareil.date_depart}</td>
+					<td>{appareil.aeroport_depart}</td>
+					<td>{appareil.aeroport_arrivee}</td>
+					<td>{appareil.horaire_depart}</td>
+					<td>{appareil.horaire_arrivee}</td>
+					<td>{appareil.num_vol}</td>
+				</tr>
+			<!-- END appareil -->
+		</table>
+	</body>
+<html>

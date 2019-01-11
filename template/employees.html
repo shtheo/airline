@@ -1,0 +1,104 @@
+<html>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link rel="icon" type="image/png" href="pictures/favicon.ico" />
+	<head>
+		<title>FastTrip.com - Personnel</title>
+	</head>
+	<body>
+		<h1>Liste des pilotes et stewards de FastTrip.com</h1>
+		<table class="menu">
+			<tr>
+				<td class="menu_cell">
+					<a href="aircrafts.php">Appareils</a>
+				</td>
+				<td class="menu_cell">
+					<a href="airports.php">Aéroports</a>
+				</td>
+				<td class="menu_cell">
+					<a href="flies.php">Vols</a>
+				</td>
+				<td class="menu_cell">
+					<a href="departures.php">Départs</a>
+				</td>
+				<td class="menu_cell">
+					<a href="passengers.php">Passagers</a>
+				</td>
+				<td class="menu_cell">
+					<a href="employees.php">Personnels</a>
+				</td>
+				<td class="menu_cell">
+					<a href="home.php">Deconnexion</a>
+				</td>
+			</tr>
+		</table>
+		{message_delete}
+		{message_insert}
+		{message_modify}
+		<h3>Les pilotes</h3>
+		<table class="classic_tab">
+			<tr>
+				<th>Numéro de sécurité sociale</th>
+				<th>Nom</th>
+				<th>Prénom</th>
+				<th>Adresse</th>
+				<th>Salaire</th>
+				<th>Numéro de licence</th>
+				<th>Heures de vol</th>
+				<th>Modifier</th>
+				<th>Supprimer</th>
+				<th>Vols/Départs</th>
+			</tr>
+			<!-- BEGIN pilote -->
+				<tr  style="background-color:{pilote.color}">
+					<td>{pilote.num_secu}</td>
+					<td>{pilote.nom}</td>
+					<td>{pilote.prenom}</td>
+					<td>{pilote.adresse}</td>
+					<td>{pilote.salaire}</td>
+					<td>{pilote.num_licence}</td>
+					<td>{pilote.total_heures}</td>
+					<td><a href ='modify_pilote.php?num_secu={pilote.num_secu}'><img width="30px" height="30px" src="Pictures/modify.png"></a></td>
+					<td><a href ='employees.php?action=delete&num_secu={pilote.num_secu}&type=pilote'><img width="30px" height="30px" src="Pictures/Delete.png"></a></td>
+					<td><a href ='pilote_departures.php?num_secu={pilote.num_secu}'><img width="30px" height="30px" src="Pictures/flight.png"></a></td>
+				</tr>
+			<!-- END pilote -->
+		</table>
+		<a href="add_pilote.php" class="ajouter">
+				<img width="30px" height="30px" src="pictures/add.png">
+				Ajouter un  pilote
+		</a>
+		<h3>Les membres de l'équipage</h3>
+		<table class="classic_tab">
+			<tr>
+				<th>Numéro de sécurité sociale</th>
+				<th>Nom</th>
+				<th>Prénom</th>
+				<th>Adresse</th>
+				<th>Salaire</th>
+				<th>Fonction</th>
+				<th>Heures de vol</th>
+				<th>Modifier</th>
+				<th>Supprimer</th>
+				<th>Vols/Départs</th>
+			</tr>
+			<!-- BEGIN equipage -->
+				<tr  style="background-color:{equipage.color}">
+					<td>{equipage.num_secu}</td>
+					<td>{equipage.nom}</td>
+					<td>{equipage.prenom}</td>
+					<td>{equipage.adresse}</td>
+					<td>{equipage.salaire}</td>
+					<td>{equipage.fonction}</td>
+					<td>{equipage.total_heures}</td>
+					<td><a href ='modify_crew.php?num_secu={equipage.num_secu}'><img width="30px" height="30px" src="Pictures/modify.png"></a></td>
+					<td><a href ='employees.php?action=delete&num_secu={equipage.num_secu}&type=equipage'><img width="30px" height="30px" src="Pictures/Delete.png"></a></td>
+					<td><a href ='crew_departures.php?num_secu={equipage.num_secu}'><img width="30px" height="30px" src="Pictures/flight.png"></a></td>
+				</tr>
+			<!-- END equipage -->
+		</table>
+		<a href="add_crew.php" class="ajouter">
+				<img width="30px" height="30px" src="pictures/add.png">
+				Ajouter un  membre
+		</a>
+	</body>
+<html>

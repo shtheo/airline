@@ -1,0 +1,44 @@
+<html>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link rel="icon" type="image/png" href="pictures/favicon.ico" />
+	<head>
+		<title>FastTrip.com - Mise à jour</title>
+	</head>
+	<body>
+		<h1>Bonjour {prenom} {nom} - Mettre à jour vos informations</h1>
+		<table class="menu">
+			<tr>
+				<td class="menu_cell">
+					<a href="sum_up_departures.php">Mes vols</a>
+				</td>
+				<td class="menu_cell">
+					<a href="buy_tickets.php">Acheter un billet</a>
+				</td>
+				<td class="menu_cell">
+					<a href="update_profile.php">Mes infos</a>
+				</td>
+				<td class="menu_cell">
+					<a href="home.php">Deconnexion</a>
+				</td>
+			</tr>
+		</table>
+		{message}
+		<form action="update_profile.php" method="POST">
+		<table>
+			<tr>
+				<td><label class="label_add">Nom : </label></td>
+				<td><input name="nom" value="{nom}"></td>
+			</tr>
+			<tr>
+				<td><label class="label_add">Prénom : </label></td>
+				<td><input name="prenom" value="{prenom}"></td>
+			</tr>
+			<tr>
+				<td><label class="label_add">Adresse : </label></td>
+				<td><input name="adresse" value="{adresse}"></td>
+			</tr>
+		</table>
+			<input type="submit" class="submit_cadre_login" name="modify_passager_request">
+		</form>
+	</body>
+</html>

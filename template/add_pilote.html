@@ -1,0 +1,66 @@
+<html>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link rel="icon" type="image/png" href="pictures/favicon.ico" />
+	<head>
+		<title>FastTrip.com - Ajouter un pilote</title>
+	</head>
+	<body>
+		<h1>Ajouter un pilote</h1>
+		<table class="menu">
+			<tr>
+				<td class="menu_cell">
+					<a href="aircrafts.php">Appareils</a>
+				</td>
+				<td class="menu_cell">
+					<a href="airports.php">Aéroports</a>
+				</td>
+				<td class="menu_cell">
+					<a href="flies.php">Vols</a>
+				</td>
+				<td class="menu_cell">
+					<a href="departures.php">Départs</a>
+				</td>
+				<td class="menu_cell">
+					<a href="passengers.php">Passagers</a>
+				</td>
+				<td class="menu_cell">
+					<a href="employees.php">Personnels</a>
+				</td>
+				<td class="menu_cell">
+					<a href="home.php">Deconnexion</a>
+				</td>
+			</tr>
+		</table>
+		{num_secu_vide}
+		{num_licence_vide}
+		<form action="add_pilote.php" method="POST">
+		<table>
+			<tr>
+				<td><label class="label_add">Numéro de sécurité sociale (20 caractères max): </label></td>
+				<td><input name="num_secu"></td>
+			</tr>
+			<tr>
+				<td><label class="label_add">Nom : </label></td>
+				<td><input name="nom"></td>
+			</tr>
+			<tr>
+				<td><label class="label_add">Prénom : </label></td>
+				<td><input name="prenom"></td>
+			</tr>
+			<tr>
+				<td><label class="label_add">Adresse : </label></td>
+				<td><input name="adresse"></td>
+			</tr>
+			<tr>
+				<td><label class="label_add">Salaire (en €): </label></td>
+				<td><input type="number" name="salaire"></td>
+			</tr>
+			<tr>
+				<td><label class="label_add">Numéro de licence (10 caractères max): </label></td>
+				<td><input name="num_licence"></td>
+			</tr>
+		</table>
+			<input type="submit" class="submit_cadre_login" name="add_pilote_request">
+		</form>
+	</body>
+<html>

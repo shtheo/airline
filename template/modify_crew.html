@@ -1,0 +1,70 @@
+<html>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link rel="icon" type="image/png" href="pictures/favicon.ico" />
+	<head>
+		<title>FastTrip.com - Modification d'un membre d'équipage</title>
+	</head>
+	<body>
+		<h1>Modification d'un membre d'équipage</h1>
+		<table class="menu">
+			<tr>
+				<td class="menu_cell">
+					<a href="aircrafts.php">Appareils</a>
+				</td>
+				<td class="menu_cell">
+					<a href="airports.php">Aéroports</a>
+				</td>
+				<td class="menu_cell">
+					<a href="flies.php">Vols</a>
+				</td>
+				<td class="menu_cell">
+					<a href="departures.php">Départs</a>
+				</td>
+				<td class="menu_cell">
+					<a href="passengers.php">Passagers</a>
+				</td>
+				<td class="menu_cell">
+					<a href="employees.php">Personnels</a>
+				</td>
+				<td class="menu_cell">
+					<a href="home.php">Deconnexion</a>
+				</td>
+			</tr>
+		</table>
+		{num_secu_vide}
+		{num_licence_vide}
+		<form action="modify_crew.php" method="POST">
+		<input name="prev_num_secu" value="{num_secu}" hidden="hidden">
+		<table>
+			<tr>
+				<td><label class="label_add">Numéro de sécurité sociale: </label></td>
+				<td>{num_secu}</td>
+			</tr>
+			<tr>
+				<td><label class="label_add">Nom : </label></td>
+				<td><input name="nom" value="{nom}"></td>
+			</tr>
+			<tr>
+				<td><label class="label_add">Prénom : </label></td>
+				<td><input name="prenom" value="{prenom}"></td>
+			</tr>
+			<tr>
+				<td><label class="label_add">Adresse : </label></td>
+				<td><input name="adresse" value="{adresse}"></td>
+			</tr>
+			<tr>
+				<td><label class="label_add">Salaire (en €): </label></td>
+				<td><input type="number" name="salaire" value="{salaire}"></td>
+			</tr>
+			<tr>
+				<td><label class="label_add">Fonction: </label></td>
+				<td><select name="fonction">
+					<option name="Steward" {steward_selected}>Steward</option>
+					<option name="Hotesse" {hotesse_selected}>Hotesse</option>
+				</select></td>
+			</tr>
+		</table>
+			<input type="submit" class="submit_cadre_login" name="modify_crew_request">
+		</form>
+	</body>
+<html>

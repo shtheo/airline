@@ -1,0 +1,60 @@
+<html>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link rel="icon" type="image/png" href="pictures/favicon.ico" />
+	<head>
+		<title>FastTrip.com - Appareils</title>
+	</head>
+	<body>
+		<h1>Liste des avions de FastTrip.com</h1>
+		<table class="menu">
+			<tr>
+				<td class="menu_cell">
+					<a href="aircrafts.php">Appareils</a>
+				</td>
+				<td class="menu_cell">
+					<a href="airports.php">Aéroports</a>
+				</td>
+				<td class="menu_cell">
+					<a href="flies.php">Vols</a>
+				</td>
+				<td class="menu_cell">
+					<a href="departures.php">Départs</a>
+				</td>
+				<td class="menu_cell">
+					<a href="passengers.php">Passagers</a>
+				</td>
+				<td class="menu_cell">
+					<a href="employees.php">Personnels</a>
+				</td>
+				<td class="menu_cell">
+					<a href="home.php">Deconnexion</a>
+				</td>
+			</tr>
+		</table>
+		{message_delete}
+		{message_insert}
+		{message_modify}
+		<table class="classic_tab">
+			<tr>
+				<th>Numéro d'immatriculation</th>
+				<th>Type</th>
+				<th>Modifier</th>
+				<th>Supprimer</th>
+				<th>Vols/Départs</th>
+			</tr>
+			<!-- BEGIN appareil -->
+				<tr  style="background-color:{appareil.color}">
+					<td>{appareil.num_immatriculation}</td>
+					<td>{appareil.type}</td>
+					<td><a href ='modify_aircraft.php?num_immatriculation={appareil.num_immatriculation}'><img width="30px" height="30px" src="Pictures/modify.png"></a></td>
+					<td><a href ='aircrafts.php?action=delete&num_immatriculation={appareil.num_immatriculation}'><img width="30px" height="30px" src="Pictures/Delete.png"></a></td>
+					<td><a href ='aircraft_departures.php?num_immatriculation={appareil.num_immatriculation}'><img width="30px" height="30px" src="Pictures/flight.png"></a></td>
+				</tr>
+			<!-- END appareil -->
+		</table>
+		<a href="add_aircraft.php" class="ajouter">
+				<img width="30px" height="30px" src="pictures/add.png">
+				Ajouter un  appareil
+		</a>
+	</body>
+<html>

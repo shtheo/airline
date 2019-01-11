@@ -1,0 +1,105 @@
+<html>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link rel="icon" type="image/png" href="pictures/favicon.ico" />
+	<script>
+		function change_dates_min_max(el){
+			var date_min;
+			var date_max; 
+			date_min = document.getElementById(el.value).getAttribute("min");			
+			date_max = document.getElementById(el.value).getAttribute("max");
+			document.getElementsByName("date_depart")[0].setAttribute("min", date_min);
+			document.getElementsByName("date_depart")[0].setAttribute("max", date_max);
+		}
+	</script>
+	<head>
+		<title>FastTrip.com - Modifier un départ</title>
+	</head>
+	<body>
+		<h1>Modifier un départ</h1>
+		<table class="menu">
+			<tr>
+				<td class="menu_cell">
+					<a href="aircrafts.php">Appareils</a>
+				</td>
+				<td class="menu_cell">
+					<a href="airports.php">Aéroports</a>
+				</td>
+				<td class="menu_cell">
+					<a href="flies.php">Vols</a>
+				</td>
+				<td class="menu_cell">
+					<a href="departures.php">Départs</a>
+				</td>
+				<td class="menu_cell">
+					<a href="passengers.php">Passagers</a>
+				</td>
+				<td class="menu_cell">
+					<a href="employees.php">Personnels</a>
+				</td>
+				<td class="menu_cell">
+					<a href="home.php">Deconnexion</a>
+				</td>
+			</tr>
+		</table>
+		{message_no_date}
+		<form action="modify_departure.php" method="POST">
+		<input name="prev_num_vol" value="{prev_num_vol}" hidden="hidden">
+		<input name="prev_date_depart" value="{prev_date_depart}" hidden="hidden">
+		<table>
+			<tr>
+				<td><label class="label_add">Numéro de vol: </label></td>
+				<td><select name="num_vol" onchange="change_dates_min_max(this)">
+					<!-- BEGIN num_vol --> 
+						<option id="{num_vol.num_vol}" value="{num_vol.num_vol}"  min="{num_vol.date_min}" max="{num_vol.date_max}" {num_vol.selected}>{num_vol.vol}</option>
+					<!-- END num_vol --> 
+				</select></td>
+			</tr>
+			<tr>
+				<td><label class="label_add">Date de départ: </label></td>
+				<td><input name="date_depart" type="date" value="{date_depart}" min="{date_min}" max="{date_max}"></td>
+			</tr>
+			<tr>
+				<td><label class="label_add">Pilote 1: </label></td>
+				<td><select name="num_pilote1">
+					<!-- BEGIN num_pilote1 --> 
+						<option value="{num_pilote1.num_secu}" {num_pilote1.selected}>{num_pilote1.pilote}</option>
+					<!-- END num_pilote1 --> 
+				</select></td>
+			</tr>
+			<tr>
+				<td><label class="label_add">Pilote 2: </label></td>
+				<td><select name="num_pilote2">
+					<!-- BEGIN num_pilote2 --> 
+						<option value="{num_pilote2.num_secu}" {num_pilote2.selected}>{num_pilote2.pilote}</option>
+					<!-- END num_pilote2 --> 
+				</select></td>
+			</tr>
+			<tr>
+				<td><label class="label_add">Equipage 1: </label></td>
+				<td><select name="num_equipage1">
+					<!-- BEGIN num_equipage1 --> 
+						<option value="{num_equipage1.num_secu}" {num_equipage1.selected}>{num_equipage1.equipage}</option>
+					<!-- END num_equipage1 --> 
+				</select></td>
+			</tr>
+			<tr>
+				<td><label class="label_add">Equipage 2: </label></td>
+				<td><select name="num_equipage2">
+					<!-- BEGIN num_equipage2 --> 
+						<option value="{num_equipage2.num_secu}" {num_equipage2.selected}>{num_equipage2.equipage}</option>
+					<!-- END num_equipage2 --> 
+				</select></td>
+			</tr>
+			<tr>
+				<td><label class="label_add">Nombre de places: </label></td>
+				<td><input name="nbr_places_libres" type="number" value="{nbr_places_libres}"></td>
+			</tr>
+			<tr>
+				<td><label class="label_add">Prix (€): </label></td>
+				<td><input name="prix" type="number" value="{prix}"></td>
+			</tr>
+		</table>
+			<input type="submit" class="submit_cadre_login" name="modify_departure_request">
+		</form>
+	</body>
+<html>

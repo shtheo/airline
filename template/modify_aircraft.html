@@ -1,0 +1,49 @@
+<html>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link rel="icon" type="image/png" href="pictures/favicon.ico" />
+	<head>
+		<title>FastTrip.com - Modifier un appareil</title>
+	</head>
+	<body>
+		<h1>Modifier un avion</h1>
+		<table class="menu">
+			<tr>
+				<td class="menu_cell">
+					<a href="aircrafts.php">Appareils</a>
+				</td>
+				<td class="menu_cell">
+					<a href="airports.php">Aéroports</a>
+				</td>
+				<td class="menu_cell">
+					<a href="flies.php">Vols</a>
+				</td>
+				<td class="menu_cell">
+					<a href="departures.php">Départs</a>
+				</td>
+				<td class="menu_cell">
+					<a href="passengers.php">Passagers</a>
+				</td>
+				<td class="menu_cell">
+					<a href="employees.php">Personnels</a>
+				</td>
+				<td class="menu_cell">
+					<a href="home.php">Deconnexion</a>
+				</td>
+			</tr>
+		</table>
+		<form action="modify_aircraft.php" method="POST">
+			<input name="prev_num_immatriculation" value="{prev_num_immatriculation}" hidden="hidden"">
+			<table>
+				<tr>
+					<td><label class="label_add">Numéro d'immatriculation : </label></td>
+					<td><input name="num_immatriculation" value="{num_immatriculation}"></td>
+				</tr>
+				<tr>
+					<td><label class="label_add">Type de l'appareil : </label></td>
+					<td><input name="type" value="{type}"></td>
+				</tr>
+			</table>
+			<input type="submit" class="submit_cadre_login" name="add_aircraft_request">
+		</form>
+	</body>
+<html>

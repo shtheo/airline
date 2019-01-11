@@ -1,0 +1,76 @@
+<html>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link rel="icon" type="image/png" href="pictures/favicon.ico" />
+	<head>
+		<title>FastTrip.com - Acheter billet</title>
+	</head>
+	<body>
+		<h1>Bonjour {prenom} {nom} - Acheter un billet</h1>
+		<table class="menu">
+			<tr>
+				<td class="menu_cell">
+					<a href="sum_up_departures.php">Mes vols</a>
+				</td>
+				<td class="menu_cell">
+					<a href="buy_tickets.php">Acheter un billet</a>
+				</td>
+				<td class="menu_cell">
+					<a href="update_profile.php">Mes infos</a>
+				</td>
+				<td class="menu_cell">
+					<a href="home.php">Deconnexion</a>
+				</td>
+			</tr>
+		</table>
+		{message}
+		<form action="buy_tickets.php" method="POST">
+		<table>
+			<tr>
+				<td><label class="label_add">Aéroport de départ : </label></td>
+				<td><select name="aeroport_depart">
+					<option value="all">Tous les aéroports</option>
+					<!-- BEGIN aeroport_depart --> 
+						<option value="{aeroport_depart.code}" {aeroport_depart.select}>{aeroport_depart.name}</option>
+					<!-- END aeroport_depart --> 
+				</select></td>
+			</tr>
+			<tr>
+				<td><label class="label_add">Aeroport arrivée : </label></td>
+				<td><select name="aeroport_arrivee">
+					<option value="all">Tous les aéroports</option>
+					<!-- BEGIN aeroport_arrivee --> 
+						<option value="{aeroport_arrivee.code}" {aeroport_arrivee.select}>{aeroport_arrivee.name}</option>
+					<!-- END aeroport_arrivee --> 
+				</select></td>
+			</tr>
+		</table>
+			<input type="submit" class="submit_cadre_login" name="search_departure">
+		</form>
+		<table class="classic_tab">
+			<tr>
+				<th>Date de départ</th>
+				<th>Aéroport départ</th>
+				<th>Aéroport arrivée</th>
+				<th>Horaire de départ</th>
+				<th>Horaire d'arrivée</th>
+				<th>Numéro de vol</th>
+				<th>Prix</th>
+				<th>Places restantes</th>
+				<th>Acheter</th>
+			</tr>
+			<!-- BEGIN depart -->
+				<tr  style="background-color:{depart.color}">
+					<td>{depart.date_depart}</td>
+					<td>{depart.aeroport_depart}</td>
+					<td>{depart.aeroport_arrivee}</td>
+					<td>{depart.horaire_depart}</td>
+					<td>{depart.horaire_arrivee}</td>
+					<td>{depart.num_vol}</td>
+					<td>{depart.prix}</td>
+					<td>{depart.nbr_places_libres}</td>
+					<td>{depart.panier}</td>
+				</tr>
+			<!-- END depart -->
+		</table>
+	</body>
+<html>

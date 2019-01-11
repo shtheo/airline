@@ -1,0 +1,55 @@
+<html>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link rel="icon" type="image/png" href="pictures/favicon.ico" />
+	<head>
+		<title>FastTrip.com - Equipage</title>
+	</head>
+	<body>
+		<h1>Liste des départs pour le membre {nom} {prenom}</h1>
+		<table class="menu">
+			<tr>
+				<td class="menu_cell">
+					<a href="aircrafts.php">Appareils</a>
+				</td>
+				<td class="menu_cell">
+					<a href="airports.php">Aéroports</a>
+				</td>
+				<td class="menu_cell">
+					<a href="flies.php">Vols</a>
+				</td>
+				<td class="menu_cell">
+					<a href="departures.php">Départs</a>
+				</td>
+				<td class="menu_cell">
+					<a href="passengers.php">Passagers</a>
+				</td>
+				<td class="menu_cell">
+					<a href="employees.php">Personnels</a>
+				</td>
+				<td class="menu_cell">
+					<a href="home.php">Deconnexion</a>
+				</td>
+			</tr>
+		</table>
+		<table class="classic_tab">
+			<tr>
+				<th>Date de départ</th>
+				<th>Aéroport départ</th>
+				<th>Aéroport arrivée</th>
+				<th>Horaire de départ</th>
+				<th>Horaire d'arrivée</th>
+				<th>Numéro de vol</th>
+			</tr>
+			<!-- BEGIN membre -->
+				<tr  style="background-color:{membre.color}">
+					<td>{membre.date_depart}</td>
+					<td>{membre.aeroport_depart}</td>
+					<td>{membre.aeroport_arrivee}</td>
+					<td>{membre.horaire_depart}</td>
+					<td>{membre.horaire_arrivee}</td>
+					<td>{membre.num_vol}</td>
+				</tr>
+			<!-- END membre -->
+		</table>
+	</body>
+<html>

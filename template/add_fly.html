@@ -1,0 +1,88 @@
+<html>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link rel="icon" type="image/png" href="pictures/favicon.ico" />
+	<head>
+		<title>FastTrip.com - Ajouter un vol</title>
+	</head>
+	<body>
+		<h1>Ajouter un vol</h1>
+		<table class="menu">
+			<tr>
+				<td class="menu_cell">
+					<a href="aircrafts.php">Appareils</a>
+				</td>
+				<td class="menu_cell">
+					<a href="airports.php">Aéroports</a>
+				</td>
+				<td class="menu_cell">
+					<a href="flies.php">Vols</a>
+				</td>
+				<td class="menu_cell">
+					<a href="departures.php">Départs</a>
+				</td>
+				<td class="menu_cell">
+					<a href="passengers.php">Passagers</a>
+				</td>
+				<td class="menu_cell">
+					<a href="employees.php">Personnels</a>
+				</td>
+				<td class="menu_cell">
+					<a href="home.php">Deconnexion</a>
+				</td>
+			</tr>
+		</table>
+		{message}
+		<form action="add_fly.php" method="POST">
+		<table>
+			<tr>
+				<td><label class="label_add">Aéroport de départ: </label></td>
+				<td><select name="aeroport_depart">
+					<!-- BEGIN aeroport_depart --> 
+						<option value="{aeroport_depart.code}">{aeroport_depart.name}</option>
+					<!-- END aeroport_depart --> 
+				</select></td>
+			</tr>
+			<tr>
+				<td><label class="label_add">Aeroport arrivée : </label></td>
+				<td><select name="aeroport_arrivee">
+					<!-- BEGIN aeroport_arrivee --> 
+						<option value="{aeroport_arrivee.code}">{aeroport_arrivee.name}</option>
+					<!-- END aeroport_arrivee --> 
+				</select></td>
+			</tr>
+			<tr>
+				<td><label class="label_add">Date début période : </label></td>
+				<td><input name="date_debut_periode" type="date"></td>
+			</tr>
+			<tr>
+				<td><label class="label_add">Date fin période : </label></td>
+				<td><input name="date_fin_periode" type="date"></td>
+			</tr>
+			<tr>
+				<td><label class="label_add">Heure de départ: </label></td>
+				<td><input type="time" name="horaire_depart"></td>
+			</tr>
+			<tr>
+				<td><label class="label_add">Heure d'arrivée: </label></td>
+				<td><input type="time" name="horaire_arrivee"></td>
+			</tr>
+			<tr>
+				<td><label class="label_add">Arrivée à J+1: </label></td>
+				<td><select name="arrivee_lendemain">
+					<option value="1">Oui</option>
+					<option value="0">Non</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td><label class="label_add">Appareil : </label></td>
+				<td><select name="appareil">
+					<!-- BEGIN appareil --> 
+						<option value="{appareil.num_immatriculation}">{appareil.appareil}</option>
+					<!-- END appareil --> 
+				</select></td>
+			</tr>
+		</table>
+			<input type="submit" class="submit_cadre_login" name="add_fly_request">
+		</form>
+	</body>
+<html>

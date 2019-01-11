@@ -1,0 +1,35 @@
+<html>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link rel="icon" type="image/png" href="pictures/favicon.ico" />
+	<head>
+		<title>FastTrip.com</title>
+	</head>
+	<body class="home">
+		<h1>Bienvenue sur le site de FastTrip.com</h1>
+		{message}
+		<div id="cadre_login">
+			<div id="intro_cadre_login">
+				Pour accéder à la plateforme, veuillez vous connecter
+			</div>
+			<!-- BEGIN error_message -->
+				<div id="error_message">
+					{error_message.message}
+				</div>
+			<!-- END error_message -->
+			<form action="home.php" method="post">
+				<table id="table_input_cadre_login">
+					<tr>
+						<td class="label_home"><label>Login :</label></td>
+						<td><input type="text" name="login"></td>
+					</tr>
+					<tr>
+						<td class="label_home"><label>Mot de passe :</label></td>
+						<td><input type="password" name="password"></td>
+					</tr>
+				</table>
+				<input type="submit" class="submit_cadre_login" name="login_request">
+			</form>
+			<p>Pas encore de compte ? Créez-le <a href="create_account.php">ici</a></p>
+		</div>
+	</body>
+</html>

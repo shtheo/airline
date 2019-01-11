@@ -1,0 +1,53 @@
+<html>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link rel="icon" type="image/png" href="pictures/favicon.ico" />
+	<head>
+		<title>FastTrip.com - Passagers du vol</title>
+	</head>
+	<body>
+		<h1>Liste des passagers du vol {num_vol} partant le {date_depart}</h1>
+		<table class="menu">
+			<tr>
+				<td class="menu_cell">
+					<a href="aircrafts.php">Appareils</a>
+				</td>
+				<td class="menu_cell">
+					<a href="airports.php">Aéroports</a>
+				</td>
+				<td class="menu_cell">
+					<a href="flies.php">Vols</a>
+				</td>
+				<td class="menu_cell">
+					<a href="departures.php">Départs</a>
+				</td>
+				<td class="menu_cell">
+					<a href="passengers.php">Passagers</a>
+				</td>
+				<td class="menu_cell">
+					<a href="employees.php">Personnels</a>
+				</td>
+				<td class="menu_cell">
+					<a href="home.php">Deconnexion</a>
+				</td>
+			</tr>
+		</table>
+		<table class="classic_tab">
+			<tr>
+				<th></th>
+				<th>Nom</th>
+				<th>Prénom</th>
+				<th>Adresse</th>
+				<th>Reservé le</th>
+			</tr>
+			<!-- BEGIN passager -->
+				<tr  style="background-color:{passager.color}">
+					<td>{passager.nombre}</td>
+					<td>{passager.nom}</td>
+					<td>{passager.prenom}</td>
+					<td>{passager.adresse}</td>
+					<td>{passager.date_emission}</td>
+				</tr>
+			<!-- END passager -->
+		</table>
+	</body>
+<html>

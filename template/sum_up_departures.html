@@ -1,0 +1,53 @@
+<html>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link rel="icon" type="image/png" href="pictures/favicon.ico" />
+	<head>
+		<title>FastTrip.com - Récapitulatif</title>
+	</head>
+	<body>
+		<h1>Bonjour {prenom} {nom} - Récapitulatif de vos trajets</h1>
+		<table class="menu">
+			<tr>
+				<td class="menu_cell">
+					<a href="sum_up_departures.php">Mes vols</a>
+				</td>
+				<td class="menu_cell">
+					<a href="buy_tickets.php">Acheter un billet</a>
+				</td>
+				<td class="menu_cell">
+					<a href="update_profile.php">Mes infos</a>
+				</td>
+				<td class="menu_cell">
+					<a href="home.php">Deconnexion</a>
+				</td>
+			</tr>
+		</table>
+		{message}
+		<table class="classic_tab" {hidden}>
+			<tr>
+				<th>Date de départ</th>
+				<th>Aéroport départ</th>
+				<th>Aéroport arrivée</th>
+				<th>Horaire de départ</th>
+				<th>Horaire d'arrivée</th>
+				<th>Prix</th>
+				<th>Ref billet</th>
+				<th>Date achat</th>
+				<th>Annuler</th>
+			</tr>
+			<!-- BEGIN passager -->
+				<tr  style="background-color:{passager.color}">
+					<td>{passager.date_depart}</td>
+					<td>{passager.aeroport_depart}</td>
+					<td>{passager.aeroport_arrivee}</td>
+					<td>{passager.horaire_depart}</td>
+					<td>{passager.horaire_arrivee}</td>
+					<td>{passager.prix} €</td>
+					<td>{passager.num_billet}</td>
+					<td>{passager.date_emission}</td>
+					<td><a href ='sum_up_departures.php?action=delete&num_billet={passager.num_billet}'><img width="30px" height="30px" src="Pictures/Delete.png"></a></td>
+				</tr>
+			<!-- END passager -->
+		</table>
+	</body>
+<html>

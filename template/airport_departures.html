@@ -1,0 +1,73 @@
+<html>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link rel="icon" type="image/png" href="pictures/favicon.ico" />
+	<head>
+		<title>FastTrip.com - Aéroports</title>
+	</head>
+	<body>
+		<h1>Liste des départs pour l'aéroport {nom}</h1>
+		<table class="menu">
+			<tr>
+				<td class="menu_cell">
+					<a href="aircrafts.php">Appareils</a>
+				</td>
+				<td class="menu_cell">
+					<a href="airports.php">Aéroports</a>
+				</td>
+				<td class="menu_cell">
+					<a href="flies.php">Vols</a>
+				</td>
+				<td class="menu_cell">
+					<a href="departures.php">Départs</a>
+				</td>
+				<td class="menu_cell">
+					<a href="passengers.php">Passagers</a>
+				</td>
+				<td class="menu_cell">
+					<a href="employees.php">Personnels</a>
+				</td>
+				<td class="menu_cell">
+					<a href="home.php">Deconnexion</a>
+				</td>
+			</tr>
+		</table>
+		<table class="classic_tab">
+			<h3>Les départs</h3>
+			<tr>
+				<th>Date de départ</th>
+				<th>Horaire de départ</th>
+				<th>Destination</th>
+				<th>Numéro de vol</th>
+				<th>Appareil</th>
+			</tr>
+			<!-- BEGIN depart -->
+				<tr  style="background-color:{depart.color}">
+					<td>{depart.date_depart}</td>
+					<td>{depart.horaire_depart}</td>
+					<td>{depart.aeroport_arrivee}</td>
+					<td>{depart.num_vol}</td>
+					<td>{depart.num_appareil}</td>
+				</tr>
+			<!-- END depart -->
+		</table>
+		<h3>Les arrivées</h3>
+		<table class="classic_tab">
+			<tr>
+				<th>Date d'arrivée</th>
+				<th>Horaire d'arrivée</th>
+				<th>Provenance</th>
+				<th>Numéro de vol</th>
+				<th>Appareil</th>
+			</tr>
+			<!-- BEGIN arrivee -->
+				<tr  style="background-color:{arrivee.color}">
+					<td>{arrivee.date_arrivee}</td>
+					<td>{arrivee.horaire_arrivee}</td>
+					<td>{arrivee.aeroport_depart}</td>
+					<td>{arrivee.num_vol}</td>
+					<td>{arrivee.num_appareil}</td>
+				</tr>
+			<!-- END arrivee -->
+		</table>
+	</body>
+<html>

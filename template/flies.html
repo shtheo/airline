@@ -1,0 +1,74 @@
+<html>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link rel="icon" type="image/png" href="pictures/favicon.ico" />
+	<head>
+		<title>FastTrip.com - Vols</title>
+	</head>
+	<body>
+		<h1>Liste des vols de FastTrip.com</h1>
+		<table class="menu">
+			<tr>
+				<td class="menu_cell">
+					<a href="aircrafts.php">Appareils</a>
+				</td>
+				<td class="menu_cell">
+					<a href="airports.php">Aéroports</a>
+				</td>
+				<td class="menu_cell">
+					<a href="flies.php">Vols</a>
+				</td>
+				<td class="menu_cell">
+					<a href="departures.php">Départs</a>
+				</td>
+				<td class="menu_cell">
+					<a href="passengers.php">Passagers</a>
+				</td>
+				<td class="menu_cell">
+					<a href="employees.php">Personnels</a>
+				</td>
+				<td class="menu_cell">
+					<a href="home.php">Deconnexion</a>
+				</td>
+			</tr>
+		</table>
+		{message_delete}
+		{message_insert}
+		{message_modify}
+		<table class="classic_tab">
+			<tr>
+				<th>Numéro de vol</th>
+				<th>Aéroport de départ</th>
+				<th>Aéroport d'arrivée</th>
+				<th>Début de la période</th>
+				<th>Fin de la periode</th>
+				<th>Horaire de départ</th>
+				<th>Horaire d'arrivée</th>
+				<th>Arrivée à J+1 ?</th>
+				<th>Numéro d'appareil</th>
+				<th>Modifier</th>
+				<th>Supprimer</th>
+				<th>Départs</th>
+			</tr>
+			<!-- BEGIN vol -->
+				<tr  style="background-color:{vol.color}">
+					<td>{vol.num_vol}</td>
+					<td>{vol.aeroport_depart}</td>
+					<td>{vol.aeroport_arrivee}</td>
+					<td>{vol.date_debut_periode}</td>
+					<td>{vol.date_fin_periode}</td>
+					<td>{vol.horaire_depart}</td>
+					<td>{vol.horaire_arrivee}</td>
+					<td>{vol.arrivee_lendemain}</td>
+					<td>{vol.num_appareil}</td>
+					<td><a href ='modify_fly.php?num_vol={vol.num_vol}'><img width="30px" height="30px" src="Pictures/modify.png"></a></td>
+					<td><a href ='flies.php?action=delete&num_vol={vol.num_vol}'><img width="30px" height="30px" src="Pictures/Delete.png"></a></td>
+					<td><a href ='fly_departures.php?num_vol={vol.num_vol}'><img width="30px" height="30px" src="Pictures/flight.png"></a></td>
+				</tr>
+			<!-- END vol -->
+		</table>
+		<a href="add_fly.php" class="ajouter">
+				<img width="30px" height="30px" src="pictures/add.png">
+				Ajouter un vol
+		</a>
+	</body>
+<html>
